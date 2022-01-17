@@ -1,0 +1,24 @@
+<h3><a class="btn btn-secondary" href="/addOrEdit"><i class="fa fa-plus"></i> Добавить</a> Список телефонов</h3>
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th>Название телефона</th>
+        <th>Цена</th>
+        <th>Описание телефона</th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    {{#each phones}}
+        <tr>
+            <td>{{this.phoneName}}</td>
+            <td>{{this.price}}</td>
+            <td>{{this.description}}</td>
+            <td>
+                <a href="/addOrEdit/{{this._id}}"><i class="fa fa-pencil fa-lg" aria-hidden="true"></i></a>
+                <a href="/addOrEdit/delete/{{this._id}}" onclick="return confirm('Точно удалить?')"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a>
+            </td>
+        </tr>
+    {{/each}}
+    </tbody>
+</table>

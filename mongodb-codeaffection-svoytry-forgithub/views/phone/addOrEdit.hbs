@@ -1,0 +1,24 @@
+<h3>{{viewTitle}}</h3>
+
+<form action="/addOrEdit" method="post" autocomplete="off">
+    <input type="hidden" name="_id" value="{{phone._id}}">
+    <div class="form-group">
+        <label>Название телефона</label>
+        <input type="text" class="form-control" name="phoneName" placeholder="Название телефона" value="{{phone.phoneName}}">
+    </div>
+    <div class="form-group">
+        <label>Цена</label>
+        <input type="text" class="form-control" name="price" placeholder="Цена" value="{{phone.price}}">
+    </div>
+    <div class="form-group">
+        <label>Описание товара</label>
+        <input type="text" class="form-control" name="description" placeholder="Описание товара" value="{{phone.description}}">
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-info"><i class="fa fa-database"></i> Сохранить</button>
+        <a class="btn btn-secondary" href="/addOrEdit/phones"><i class="fa fa-list-alt"></i> Показать телефоны</a>
+    </div>
+</form>
+
+
+<!--value чтобы считывалось когда редактируешь-->
